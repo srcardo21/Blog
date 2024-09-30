@@ -1,0 +1,64 @@
+/*Css basico del about me 505050*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../Images/about.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.testimonial {
+    padding: 30px 10px;
+}
+
+article h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}   
+
+article h1:after {
+    content: "";
+    height: 5px;
+    width: 225px;
+    background-color: #fff;
+    display: block;
+    margin: auto;
+}
+
+article img {
+    height: 200px;
+    width: 200px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 60px;
+}
+
+blockquote {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 40px;
+}
+
+.wrapper a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #9c9c9c;
+    color: #fff;
+    padding: 15px 40px;
+    letter-spacing: 1px;
+}
