@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="../Css/stylesPage.css">
     <!--Responsive-->
     <link rel="stylesheet" href="../Css/Responsive.css">
-    <title>Repositorio Local</title>
+    <title>Branches</title>
 </head>
 <body>
     <div class="row">
         <div class="imgWrapperGit">
-            <img src="../Images/iniciarGit.png" alt="">
+            <img src="../Images/gitBranch.png" alt="">
         </div>
           <!--Seccion 1-->
         <div class="contentWrapper">
@@ -25,12 +25,13 @@
                 <span class="textWrapper">
                     <span></span>ING Software y Datos
                 </span>
-                <h2>Repositorio Local</h2>
+                <h2>Branches</h2>
                 <p>
-                    Un repositorio local es una copia de un repositorio de GitHub almacenada en tu computadora.<br>
-                    Es como una copia de la versión actual del proyecto que puedes manipular, realizar cambios. experimentar y trabajar de forma independiente.
-                    <br><br><b>1.</b> Nos vamos a ubicar en la carpeta donde esta el proyecto.
-                    <br><br><b>2.</b> Damos un Click derecho y seleccionamos la opción <b>Open Git Bash Here.</b>
+                    En Git, una rama es una línea de desarrollo independiente de un proyecto, que permite trabajar diferentes versiones del código sin afectar la rama principal y luego unirlas.
+                    <br><br><b>1.</b> Si usamos el comando <b>git branch</b>, podemos ver las ramas que tenemos creadas.
+                    <br><br><b>2.</b> Para crear una rama usamos el comando <b>git branch nombreRama</b>, donde después del branch, ponemos el nombre que tendrá la rama.
+                    <br><br><b>3.</b> Si usamos nuevamente el comando <b>git branch</b>, podemos ver la rama que creamos.
+                    <br><br><b>4.</b> Para cambiar entre una rama y otra usamos el comando <b>git checkout nombreRama</b>, donde después del checkout ponemos el nombre de la rama que vamos a usar.                  
                 </p>
             </div>
         </div>
@@ -38,15 +39,13 @@
         <div class="contentWrapper">
             <div class="content">
                 <p>
-                    <b>3.</b> Ejecutamos el comando <b>git init</b>, para crear una subcarpeta oculta llamada .git, aquí se guarda toda la información necesaria del repositorio: <br>Ramas, Objetos, Configuraciones
-                    <br><br><b>4.</b> Con el comando <b>git add</b> ., agregamos todos los cambios realizados en los archivos del directorio al área de preparación (Staging area).
-                    <br><br><b>5.</b> Si usamos el comando <b>git status</b>, podemos ver el estado actual del repositorio. Cambios realizados, cuales están listos para ser guardados (Commit) y cuales aún no.
-                </p>
+                    <b>◉</b> Adicional podemos cambiar el nombre de la rama con el comando <b>git branch -m nombreActual NombreNuevo.</b>
+                    <br><br><b>◉</b> O eliminar una rama, <b>git branch -d nombreRama.</b>
+                    <br><br><b>Nota:</b> Para eliminar una rama, <b>NO</b> podemos estar sobre la misma.
             </div>
-            
         </div>
         <div class="imgWrapperGit">
-            <img src="../Images/gitInit.png" alt="">
+            <img src="../Images/gitBranchOpciones.png" alt="">
         </div>
         <!--Seccion 3-->
         <div class="imgWrapperGit">
@@ -54,13 +53,12 @@
         </div>
         <div class="contentWrapper">
             <div class="content">
+                <h2>Ejemplos:</h2>
                 <p>
-                    <b>6.</b> Cuando vayamos a realizar el primer commit, nos puede solicitar el Correo y usuario de GitHub, para eso usamos los comandos:
-                    <br><b>git config --global user.email "tucorreo@ejemplo.com"</b>
-                    <br><b>git config --global user.name "usuario"</b>
-                    <br><br>Donde en las comillas dobles (" ") ponemos el correo y el usuario de GitHub que tenemos creado.
-                    <br><br><b>7.</b> Ahora usamos el comando <b>git commit - m</b>, para crear una captura exacta del estado del proyecto, después de realizar la captura, las confirmaciones instantáneas son almacenadas en el repositorio local de Git.          
-                    <br><br><b>8.</b> Y de esta manera creamos un repositorio local con git.
+                    Para este ejemplo vamos a crear un archivo de texto en la rama que creamos <b>(Rama_1)</b>, usando el comando <b>touch "texto1.txt".</b>
+                    <br><br>Luego vamos a usar el comando <b>git add .</b>, para agregar todos los cambios al área de preparación y ejecutamos un <b>git commit -m ""</b>, para almacenarlo en la rama seleccionada del repositorio actual.
+
+                    <br><br>Como se puede apreciar en la imagen en la rama <b>Master</b> no contiene el archivo que creamos, pero si en la rama <b>Rama_1.</b>
                 </p>
                 <a href="../index.html">Go Back!</a>
             </div>
