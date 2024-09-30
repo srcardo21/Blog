@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!--Icono Pagina-->    
+    <link rel="shortcut icon" href="../Images/codigo.png" type="image/x-icon"/>
+    <!--Tipo de letra-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../Css/stylesPage.css">
+    <!--Responsive-->
+    <link rel="stylesheet" href="../Css/Responsive.css">
+    <title>GitHub</title>
+</head>
+<body>
+    <div class="row">
+        <!--Seccion 1-->
+        <div class="imgWrapperGit">
+            <img src="../Images/gitBranch.png" alt="">
+        </div>
+        <div class="contentWrapper">
+            <div class="content">
+                <span class="textWrapper">
+                    <span></span>ING Software y Datos
+                </span>
+                <h2></h2>
+                <p>
+                    Los repositorios remotos son versiones de tu proyecto que están hospedadas en Internet o en cualquier otra red.
+                    <br><br><b>1.</b> Para empezar debemos tener ya creado nuestro repositorio local.
+                    <br><br><b>2.</b> Una vez creado, vamos a GitHub y creamos un nuevo repositorio.
+                    <br><br><b>3.</b> Si usamos nuevamente el comando <b>git branch</b>, podemos ver la rama que creamos.
+                    <br><br><b>4.</b> Para cambiar entre una rama y otra usamos el comando <b>git checkout nombreRama</b>, donde después del checkout ponemos el nombre de la rama que vamos a usar.                  
+                </p>
+            </div>
+        </div>
+        <!--Seccion 2-->
+        <div class="contentWrapper">
+            <div class="content">
+                <p>
+                    <b>◉</b> Adicional podemos cambiar el nombre de la rama con el comando <b>git branch -m nombreActual NombreNuevo.</b>
+                    <br><br><b>◉</b> O eliminar una rama, <b>git branch -d nombreRama.</b>
+                    <br><br><b>Nota:</b> Para eliminar una rama, <b>NO</b> podemos estar sobre la misma.
+            </div>
+        </div>
+        <div class="imgWrapperGit">
+            <img src="../Images/gitBranchOpciones.png" alt="">
+        </div>
+        <!--Seccion 3-->
+        <div class="imgWrapperGit">
+            <img src="../Images/gitBranchEjemplo.png" alt="">
+        </div>
+        <div class="contentWrapper">
+            <div class="content">
+                <h2>Ejemplos:</h2>
+                <p>
+                    Para este ejemplo vamos a crear un archivo de texto en la rama que creamos <b>(Rama_1)</b>, usando el comando <b>touch "texto1.txt".</b>
+                    <br><br>Luego vamos a usar el comando <b>git add .</b>, para agregar todos los cambios al área de preparación y ejecutamos un <b>git commit -m ""</b>, para almacenarlo en la rama seleccionada del repositorio actual.
+                </p>
+            </div>
+        </div>
+        <!--Seccion 4-->
+        <div class="contentWrapper">
+            <div class="content">
+                <p>
+                    <br><br>Como se puede apreciar en la imagen en la rama <b>Master</b> no contiene el archivo que creamos, pero si la rama <b>Rama_1.</b><br><br><br>
+                </p>
+            </div>
+        </div>
+        <div class="imgWrapperGit">
+            <img src="../Images/gitBranchEjemploVS.png" alt="">
+        </div>
+        <!--Seccion 5-->
+        <div class="imgWrapperGit">
+            <img src="../Images/gitBranchMerge.png" alt="">
+        </div>
+        <div class="contentWrapper">
+            <div class="content">
+                <h2>Merge</h2>
+                <p>
+                    Permite tomar las líneas independientes de desarrollo creadas por git branch e integrarlas en una sola rama.
+                    <br><br>Nos paramos en la rama <b>Master</b> y luego ejecutamos el comando <b>git merge nombreRama</b>, esto para que la información sincronice en ambas ramas.
+                </p>
+                <a href="../index.html">Go Back!</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-img">
+        <span>&times;</span>
+        <img src="../Images/github-copilot.jpg" alt="">
+    </div>
+<!--Script para seleccionar una imagen y realizar zoom-->
+    <script>
+        document.querySelectorAll('.imgWrapperGit img').forEach(img => {
+            img.onclick = () => {
+                document.querySelector('.popup-img').style.display = 'block';
+                document.querySelector('.popup-img img').src = img.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-img span').onclick = () => {
+            document.querySelector('.popup-img').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
